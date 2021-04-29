@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1>Welcome to the Watchlist</h1>
+
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+
+  <ul class="list-inline">
+    <li><%= link_to "Create a List", new_list_path  %></li>
+  </ul>
+</div>
