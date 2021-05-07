@@ -1,16 +1,17 @@
 <div class="container">
-  <div class="header d-flex justify-content-between my-3">
+  <div class="header d-flex justify-content-between my-5">
     <h1><%= @list.name %></h1>
-    <button class='btn btn-dark btn-sm'><%= link_to "Add a Film", new_list_bookmark_path(@list) %></button>
+    <button class='btn btn-dark btn-sm'><%= link_to 'Edit List',  edit_list_path(@list)%></button>
+    <button class='btn btn-dark btn-sm'><%= link_to 'Add a Film', new_list_bookmark_path(@list) %></button>
   </div>
 
-  <div class="films row d-flex justify-content-between align-items-center">
+  <div class="films row d-flex justify-content-between align-items-stretch">
     <% @bookmarks.each do |bookmark| %>
     <div class="col-auto mb-3">
-      <div class="card" style="width: 18rem;">
-        <img src= "<%= Movie.find(bookmark.movie_id).poster_url %>"alt="nope">
-        <h4><%= link_to Movie.find(bookmark.movie_id).title, movie_path(bookmark.movie_id) %></h4>
-        <p><%= Movie.find(bookmark.movie_id).overview[0..100] %>...</p>
+      <div class="card" >
+        <img class="card-img" src= "<%= Movie.find(bookmark.movie_id).poster_url %>"alt="nope" style=" width:305; height: 460;">
+        <h4 class = "card-title"><%= link_to Movie.find(bookmark.movie_id).title, movie_path(bookmark.movie_id) %></h4>
+        <p><%= Movie.find(bookmark.movie_id).overview[0..90]%>...</p>
         <p><%= Movie.find(bookmark.movie_id).rating %> ✭</p>
       </div>
     </div>
