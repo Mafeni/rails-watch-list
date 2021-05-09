@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[new create]
   end
 
-  resources :movies, only: %i[show]
+  resources :movies, only: %i[show new create]
+  get 'results', to: 'movies#results'
 end

@@ -11,6 +11,13 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  color: $white;
+  font-family: Futura;
+  font-weight: bold;
+  text-shadow: 3px 3px $dark-purple;
+}
+
 .header {
   padding-top: 16px;
 }
@@ -44,4 +51,11 @@ h1 {
 
 .add-button {
   color: #157FFB;
+}
+
+.review-card {
+  background-color: $white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 4px;
 }

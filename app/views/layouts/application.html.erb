@@ -13,6 +13,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <a href="<%= lists_path %>"><i class="fas fa-film fa-xl"></i></a>
+      <%= yield %>
+    </div>
   </body>
 </html>
